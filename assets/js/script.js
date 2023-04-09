@@ -7,6 +7,14 @@ var submitBtn = document.querySelector("button");
 var cityInput = document.querySelector("input");
 var searchHistory = document.querySelector("ul");
 
+// Cosmetic Only function for putting a random city name in the input field
+function inputPlaceholder() {
+    var cityNames = ["Seattle","Dallas","Houston","Atlanta","New York","London","Los Angeles"]
+    var n = Math.floor(Math.random()*cityNames.length)
+    cityInput.setAttribute("placeholder",cityNames[n])
+}
+inputPlaceholder();
+
 // This listens for a click on the City Search form
 submitBtn.addEventListener("click",function(event){
     event.preventDefault();
